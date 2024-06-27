@@ -1,0 +1,162 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0; 
+  height: 100%;
+  width: 60px;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.7s;
+  overflow: hidden;
+  z-index: 1000;
+  border-radius: 15px;
+  border-right: 2px solid black;
+}
+
+.navbar.open {
+  width: 170px;
+}
+
+.nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  color: black;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  transition: background-color 0.3s;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 1px 0px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.nav-links li:hover {
+  background-color: #727272;
+  font-size: 20px;
+}
+
+.nav-links li:hover a {
+  color: rgb(255, 255, 255); /* Change link color to white on hover */
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links a:hover {
+  color: rgb(255, 255, 255); /* Ensure link color remains white when hovered */
+}
+
+.navibar-para1{
+  align-items: center;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  margin-top: 18px;
+}
+
+.navibar-para1:hover{
+  font-size: 48px;
+}
+
+.home-container {
+  padding: 20px; /* Example padding */
+  color: black;
+}
+
+.section {
+  margin-top: 20px; /* Example margin */
+}
+
+
+
+

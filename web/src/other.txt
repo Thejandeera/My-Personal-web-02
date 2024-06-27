@@ -1,0 +1,12 @@
+<div id="projects" className="section">
+        Projects Section
+      </div>
+      <div id="names" className="section">
+        Names Section
+      </div>
+      <div id="about" className="section">
+        About Section
+      </div>
+      <div id="contact" className="section">
+        Contact Section
+      </div>

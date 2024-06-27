@@ -157,6 +157,146 @@ button:focus-visible {
   margin-top: 20px; /* Example margin */
 }
 
+/* Home.css */
+.home {
+  padding: 20px;
+  font-family: 'Arial, sans-serif';
+  color: #333;
+  background: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+.hero-section {
+  
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-section h1 {
+ 
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1.2em;
+}
+
+.cta-button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.profile-image {
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.bio {
+  max-width: 600px;
+}
+
+.bio h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.bio p {
+  font-size: 1.2em;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-animation {
+  animation: scrollAnimation 1s ease forwards;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px); /* Adjust the distance as needed */
+  }
+}
+
+/* Ensure consistent height for the hero-section */
+.hero-section {
+  min-height: 200px; /* Adjust as per your design */
+}
+
 
 
 

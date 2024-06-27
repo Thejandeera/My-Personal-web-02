@@ -291,12 +291,3 @@ button:focus-visible {
     transform: translateY(10px); /* Adjust the distance as needed */
   }
 }
-
-/* Ensure consistent height for the hero-section */
-.hero-section {
-  min-height: 200px; /* Adjust as per your design */
-}
-
-
-
-

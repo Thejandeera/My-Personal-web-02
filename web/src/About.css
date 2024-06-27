@@ -1,0 +1,202 @@
+
+/* Ensure consistent height for the hero-section */
+.hero-section {
+    min-height: 200px; /* Adjust as per your design */
+  }
+  
+  .about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .about-hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .profile-image-about {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-image-about:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bio {
+    max-width: 800px;
+  }
+  
+  .bio h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .bio p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: #000;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .social-media a {
+    font-size: 2rem;
+    color: #007bff;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-media a:hover {
+    color: #0056b3;
+    transform: translateY(-5px);
+  }
+  
+  .professional-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .professional-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .professional-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .professional-section li {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .professional-section h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  .professional-section p {
+    font-size: 1.1rem;
+    color: #666;
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  .about-para1:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Additional Animations and Transitions */
+  .social-media a:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .professional-section li:hover {
+    background-color: #f0f0f0;
+    padding-left: 10px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+  }
+  
+  .professional-section h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

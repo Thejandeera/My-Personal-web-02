@@ -13,7 +13,7 @@ function Home() {
     const intervalId = setInterval(() => {
       index = (index + 1) % titles.length;
       setScrollAnimation(true); // Trigger scroll animation
-      setTimeout(() => setScrollAnimation(false), 1000); // Reset scroll animation after 1 second
+      setTimeout(() => setScrollAnimation(false), 100); // Reset scroll animation after 1 second
       setTitle(titles[index]);
     }, 2000);
     return () => clearInterval(intervalId);

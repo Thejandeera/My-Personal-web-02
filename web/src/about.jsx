@@ -19,9 +19,9 @@ function About() {
             <a href="https://github.com/Thejandeera" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>
             </a>
-            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
-            </a>
+            <a href="https://www.facebook.com/dasun.bob.7?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook"></i>
+          </a>
           </div>
         </div>
       </section>

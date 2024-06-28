@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavigationBar from "./navigationBar";
 import Image from './assets/my.jpg';
+import './Home.css';
 
 
 function Home() {

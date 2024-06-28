@@ -1,151 +1,196 @@
-
+/* Base styles */
 .projects-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: padding-left 0.7s; /* Ensure smooth transition */
+}
+
+.projects-hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideInUp 1s ease-in-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.learn-more-link {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.learn-more-link:hover {
+  color: #0056b3;
+}
+
+.professional-projects-section {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.professional-projects-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.professional-projects-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.professional-projects-section li {
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.professional-projects-section h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.professional-projects-section p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+
+
+.project-para1 {
+  font-size: 30px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .projects-container {
+    padding-left: 70px; /* Add padding to prevent content from being hidden by navbar */
+    padding-right: 10px; /* Add right padding */
+  }
+
   .projects-hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f0f0f0;
-    padding: 40px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    animation: fadeIn 1s ease-in-out;
-    color: #000;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 25px;
-    border: 1px solid black;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-  
-  .project-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideInUp 1s ease-in-out;
-    
   }
-  
-  @keyframes slideInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  .project-card {
+    width: 100%; /* Adjust width to fit smaller screens */
+    margin-bottom: 20px; /* Add margin between cards on smaller screens */
   }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
+
   .project-card h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
   }
-  
+
   .project-card p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
+    font-size: 0.9rem;
   }
-  
+
   .learn-more-link {
-    font-size: 1rem;
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 0.9rem;
   }
-  
-  .learn-more-link:hover {
-    color: #0056b3;
-  }
-  
+
   .professional-projects-section {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
-    animation: fadeIn 1s ease-in-out;
+    padding: 20px;
   }
-  
+
   .professional-projects-section h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .professional-projects-section ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .professional-projects-section li {
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  .professional-projects-section h3 {
     font-size: 1.5rem;
-    color: #007bff;
-    margin-bottom: 10px;
   }
-  
+
+  .professional-projects-section h3 {
+    font-size: 1.2rem;
+  }
+
   .professional-projects-section p {
-    font-size: 1.1rem;
-    color: #666;
+    font-size: 1rem;
   }
-  .project-para1{
-    font-size: 30px;
-  }
-  
-  .project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project-card img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  
+}

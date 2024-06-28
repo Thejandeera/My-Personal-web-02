@@ -2,6 +2,7 @@ import NavigationBar from "./navigationBar";
 import React from 'react';
 import projectimage from './assets/ATCS.jpg';
 import './Project.css';
+import updatingsoon from './assets/updatingsoon.jpg'
 
 
 
@@ -10,17 +11,21 @@ function Projects() {
     {
       title: 'Project ATCS',
       description: 'Automated Vehicle Monitoring system.',
-      link: 'https://github.com/yourprofile/project-one',
+      link: 'https://github.com/Thejandeera/Project-ATCS',
+      image:projectimage
+      
     },
     {
       title: 'Project Two',
       description: 'Coming soon...',
       link: 'https://github.com/yourprofile/project-two',
+      image:updatingsoon
     },
     {
       title: 'Project Three',
       description: 'Coming soon...',
       link: 'https://github.com/yourprofile/project-three',
+      image:updatingsoon
     },
   ];
 
@@ -35,7 +40,7 @@ function Projects() {
       <section className="projects-list">
         {projectList.map((project, index) => (
           <div key={index} className="project-card">
-             <img src={projectimage} alt={project.title} />
+             <img src={project.image} alt={project.title} />
             <h2>{project.title}</h2>
             <p>{project.description}</p>
             <a href={project.link} target="_blank" rel="noopener noreferrer" className="learn-more-link">

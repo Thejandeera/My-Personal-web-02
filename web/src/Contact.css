@@ -28,7 +28,7 @@
 }
 
 .contact-image:hover {
-  transform: scale(1.1);
+  filter: drop-shadow(0 0 3em #030303aa);
 }
 
 .contact-hero-section h1 {

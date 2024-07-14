@@ -1,6 +1,7 @@
 import NavigationBar from "./navigationBar";
 import React from 'react';
 import projectimage from './assets/ATCS.jpg';
+import webimage from './assets/myweb.png';
 import './Project.css';
 import updatingsoon from './assets/updatingsoon.jpg'
 
@@ -16,10 +17,10 @@ function Projects() {
       
     },
     {
-      title: 'Project Two',
-      description: 'Coming soon...',
-      link: 'https://github.com/yourprofile/project-two',
-      image:updatingsoon
+      title: 'My Personal web',
+      description: 'My First Web page',
+      link: 'https://lnkd.in/gbgiDE6F',
+      image:webimage
     },
     {
       title: 'Project Three',

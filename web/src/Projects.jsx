@@ -2,6 +2,7 @@ import NavigationBar from "./navigationBar";
 import React from 'react';
 import projectimage from './assets/ATCS.jpg';
 import webimage from './assets/myweb.png';
+import chatweb from './assets/chat.png';
 import './Project.css';
 import updatingsoon from './assets/updatingsoon.jpg'
 
@@ -12,7 +13,7 @@ function Projects() {
     {
       title: 'Project ATCS',
       description: 'Automated Vehicle Monitoring system.',
-      link: 'https://github.com/Thejandeera/Project-ATCS',
+      link: 'https://lnkd.in/gbgiDE6F',
       image:projectimage
       
     },
@@ -23,10 +24,10 @@ function Projects() {
       image:webimage
     },
     {
-      title: 'Project Three',
-      description: 'Coming soon...',
-      link: 'https://github.com/yourprofile/project-three',
-      image:updatingsoon
+      title: 'Chat Web',
+      description: ' Excited to share my latest project! Built a chat web app from scratch using Express.js, MongoDB, Vite, and Tailwind CSS. Check it out and let me know what you think!',
+      link: 'https://www.linkedin.com/posts/thejandeera-sandeepana-6baa17208_im-happy-to-share-this-chat-web-project-activity-7219626097158545409-cSrN?utm_source=share&utm_medium=member_androidp',
+      image:chatweb
     },
   ];
 

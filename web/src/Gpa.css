@@ -1,58 +1,137 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Soft background color */
+}
+
 .gpa-container {
-    padding: 20px;
-    background-color: white;
-    color: #333; /* Dark text color for better contrast */
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left by default */
+}
+
+.gpa-hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Module Grade Inputs */
+.grades-input {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.module-grade {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.module-grade label {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.module-grade select {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  width: 200px;
+}
+
+.module-grade select:hover,
+.module-grade select:focus {
+  border-color: #007BFF; /* Blue color on hover/focus */
+  outline: none;
+}
+
+/* Button */
+.calculate-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #0056b3;
+}
+
+.calculate-btn:active {
+  background-color: #004085;
+}
+
+/* GPA Result */
+.gpa-result {
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gpa-result h2 {
+  margin: 0;
+  color: #28a745; /* Green color for a positive result */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gpa-container {
+    padding: 40px 10px 10px 0px; /* Default padding */
+    max-width: 100%; /* Full width on smaller screens */
+    margin: 0 10px; /* Small margin on the sides */
+    align-items: flex-start; /* Align content to the left */
+    padding-left: 80px; /* Add left padding to shift content right */
   }
-  
-  .gpa-hero-section {
-    text-align: center;
-  }
-  
-  .grades-input {
-    margin-bottom: 20px;
-  }
-  
-  .module-grade {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .module-grade label {
-    font-size: 18px;
-    margin-right: 10px;
-    color: #333; /* Ensure label text is dark */
-  }
-  
+
+  /* Maintain box design, adjust inputs and button to full width */
   .module-grade select {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #333; /* Dark text color inside select dropdown */
-    background-color: #fff; /* White background for select */
+    width: 100%; /* Full width for select dropdowns */
   }
-  
+
   .calculate-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    width: 100%; /* Full width for the button */
+    padding: 12px 20px; /* Adjust padding */
   }
-  
-  .calculate-btn:hover {
-    background-color: #555;
-  }
-  
+
+  /* Result section adjustments */
   .gpa-result {
-    margin-top: 20px ;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333; /* Dark color for the result text */
+    padding: 20px;
   }
-  
+}

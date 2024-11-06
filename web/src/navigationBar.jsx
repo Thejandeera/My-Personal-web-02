@@ -22,6 +22,7 @@ const NavigationBar = () => {
           <li><a href="projects">Projects 💻</a></li>
           <li><a href="education">Educations 👨‍🎓</a></li>
           <li><a href="contact">Contact me 📞</a></li>
+          <li><a href="gpa">Gpa </a></li>
         </ul>
         <p className="navibar-para1" >😄</p></>
         

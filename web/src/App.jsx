@@ -6,7 +6,7 @@ import Contact from './Contact.jsx';
 import About from './about.jsx';
 import Education from './Educations.jsx';
 import Projects from './Projects.jsx';
-
+import Gpa from './Gpa.jsx';
 function App() {
   return (
     <div>
@@ -18,6 +18,7 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gpa" element={<Gpa />} />
           
         </Routes>
       </BrowserRouter>

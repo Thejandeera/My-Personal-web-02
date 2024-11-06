@@ -1,0 +1,58 @@
+.gpa-container {
+    padding: 20px;
+    background-color: white;
+    color: #333; /* Dark text color for better contrast */
+  }
+  
+  .gpa-hero-section {
+    text-align: center;
+  }
+  
+  .grades-input {
+    margin-bottom: 20px;
+  }
+  
+  .module-grade {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .module-grade label {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #333; /* Ensure label text is dark */
+  }
+  
+  .module-grade select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333; /* Dark text color inside select dropdown */
+    background-color: #fff; /* White background for select */
+  }
+  
+  .calculate-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .calculate-btn:hover {
+    background-color: #555;
+  }
+  
+  .gpa-result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Dark color for the result text */
+  }
+  

@@ -113,7 +113,7 @@ function GpaCalculator() {
   onChange={(e) => setName(e.target.value)}
   placeholder="Enter Your Name"
   style={{
-    backgroundColor: 'white', 
+    backgroundColor: 'white' , 
     color: 'black' ,
     height: '40px',
     fontSize:'25px'

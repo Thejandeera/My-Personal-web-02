@@ -28,7 +28,7 @@ function GpaCalculator() {
     'E': 0.0
   };
 
-  // State to store grades for each module
+  // State to store the grades for each module
   const [grades, setGrades] = useState({
     digitalElectronics: '',
     dataStructures: '',
@@ -40,6 +40,9 @@ function GpaCalculator() {
   // State to store the final GPA result
   const [finalGpa, setFinalGpa] = useState(null);
 
+  // State to store the student's name
+  const [name, setName] = useState('');
+
   // Handle grade change for each module
   const handleGradeChange = (module, value) => {
     setGrades(prevGrades => ({ ...prevGrades, [module]: value }));
@@ -47,6 +50,11 @@ function GpaCalculator() {
 
   // Calculate GPA for each module and final GPA
   const calculateGpa = () => {
+    if (!name.trim()) {
+      alert("Please enter your name before calculating GPA.");
+      return;
+    }
+
     let totalPoints = 0;
     let totalCredits = 0;
 
@@ -58,9 +66,38 @@ function GpaCalculator() {
       }
     });
 
-    // Calculate the final GPA
     const finalGpaValue = totalPoints / totalCredits;
     setFinalGpa(finalGpaValue.toFixed(2));
+
+    // Send data to Google Sheets
+    sendToGoogleSheets(name, grades, finalGpaValue.toFixed(2));
+  };
+
+  const sendToGoogleSheets = async (name, grades, gpa) => {
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('digitalElectronics', grades.digitalElectronics);
+    formData.append('dataStructures', grades.dataStructures);
+    formData.append('computerOrg', grades.computerOrg);
+    formData.append('engineeringMath', grades.engineeringMath);
+    formData.append('englishForAcad', grades.englishForAcad);
+    formData.append('finalGpa', gpa);
+
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwWAW1hk01HJhGM-0DLTIKWE4zDUtbJwi2ZOYMTPDFA4PKn0F4shjfbvtOLrLlkoIP0fg/exec', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        console.log('Data sent to Google Sheets successfully');
+      } else {
+        console.error('Failed to send data to Google Sheets');
+      }
+    } catch (error) {
+      console.error('Error sending data to Google Sheets:', error);
+    }
   };
 
   return (
@@ -69,6 +106,21 @@ function GpaCalculator() {
       <section className="gpa-hero-section">
         <h1>GPA Calculator</h1>
         <p>Enter your grades for each module to calculate your GPA.</p>
+
+        <input 
+  type="text"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+  placeholder="Enter Your Name"
+  style={{
+    backgroundColor: 'white', 
+    color: 'black' ,
+    height: '40px',
+    fontSize:'25px'
+  }}
+  className="name-input"
+/>
+
 
         <div className="grades-input">
           {Object.keys(grades).map((module, index) => (

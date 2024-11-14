@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Align content to the left by default */
@@ -33,6 +33,40 @@ h1 {
 p {
   font-size: 18px;
   color: #555;
+}
+
+/* Name Field */
+.name-input {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%; /* Ensure it takes up full width of the container */
+}
+
+.name-input label {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.name-input input {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #ffffff; /* White text color */
+  background-color: #ffffff; 
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 80%; /* Ensure it takes up full width */
+  height: 20%;
+  transition: border-color 0.3s ease;
+}
+
+.name-input input:hover,
+.name-input input:focus {
+  border-color: #007BFF; /* Blue color on hover/focus */
+  outline: none;
 }
 
 /* Module Grade Inputs */
@@ -83,6 +117,7 @@ p {
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .calculate-btn:hover {
@@ -91,6 +126,10 @@ p {
 
 .calculate-btn:active {
   background-color: #004085;
+}
+
+.calculate-btn:focus {
+  outline: none;
 }
 
 /* GPA Result */
@@ -103,6 +142,9 @@ p {
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Full width to ensure responsiveness */
+  align-items: center;
+  padding-left: 60px;
 }
 
 .gpa-result h2 {
@@ -110,11 +152,27 @@ p {
   color: #28a745; /* Green color for a positive result */
 }
 
+.gpa-result p {
+  font-size: 16px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Hover effect for results */
+.gpa-result:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .gpa-container {
     padding: 40px 10px 10px 0px; /* Default padding */
-    max-width: 100%; /* Full width on smaller screens */
+    max-width: 80%; /* Full width on smaller screens */
     margin: 0 10px; /* Small margin on the sides */
     align-items: flex-start; /* Align content to the left */
     padding-left: 80px; /* Add left padding to shift content right */
@@ -134,4 +192,75 @@ p {
   .gpa-result {
     padding: 20px;
   }
+
+  /* Name input adjustments */
+  .name-input input {
+    width: 60%; /* Full width for the name input */
+  }
+
+  h1 {
+    font-size: 28px; /* Adjust heading size for smaller screens */
+  }
+
+  p {
+    font-size: 16px; /* Adjust paragraph text for smaller screens */
+  }
+}
+
+/* Additional Styles for Buttons */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.button-group .reset-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #f44336; /* Red color for reset button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-group .reset-btn:hover {
+  background-color: #d32f2f;
+}
+
+.button-group .reset-btn:active {
+  background-color: #b71c1c;
+}
+
+/* Tooltip on Hover for Inputs */
+.module-grade select:hover::after,
+.name-input input:hover::after {
+  content: 'Click to choose or enter grade';
+  position: absolute;
+  background-color: #ffffff;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  top: 50%;
+  left: 100%;
+  margin-left: 10px;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  width: 80%;
+}
+
+/* Styling for Labels */
+label {
+  font-weight: 600;
+  font-size: 18px;
+  color: #f5f3f3;
+}
+
+/* Focus Effect for Inputs */
+input:focus,
+select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }

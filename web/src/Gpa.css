@@ -4,18 +4,32 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f5f5f5; /* Soft background color */
+  display: flex;
 }
 
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #333;
+  z-index: 1000;
+}
+
+/* GPA Container */
 .gpa-container {
   padding: 40px 20px;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 40px auto 40px 100px; /* Adjusted left margin to prevent overlap with sidebar */
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left by default */
+  align-items: flex-start;
+  position: relative;
 }
 
 .gpa-hero-section {
@@ -42,11 +56,16 @@ p {
   flex-direction: column;
   align-items: flex-start;
   width: 100%; /* Ensure it takes up full width of the container */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 8px; /* Add padding inside the input */
+  padding-right: 1px;
 }
+
 
 .name-input label {
   font-size: 18px;
-  color: #ffffff;
+  color: #333;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -54,12 +73,11 @@ p {
 .name-input input {
   padding: 10px 15px;
   font-size: 16px;
-  color: #ffffff; /* White text color */
-  background-color: #ffffff; 
+  color: #333; /* Dark text color */
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
   width: 80%; /* Ensure it takes up full width */
-  height: 20%;
   transition: border-color 0.3s ease;
 }
 
@@ -139,7 +157,7 @@ p {
   font-weight: bold;
   color: #333;
   background-color: #f8f9fa;
-  padding: 15px;
+  padding: 15px ;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 80%; /* Full width to ensure responsiveness */
@@ -149,7 +167,7 @@ p {
 
 .gpa-result h2 {
   margin: 0;
-  color: #28a745; /* Green color for a positive result */
+  color: #ff0000; /* Green color for a positive result */
 }
 
 .gpa-result p {
@@ -162,6 +180,7 @@ p {
 .gpa-result:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 .error-message {
   color: red;
   font-size: 16px;
@@ -170,40 +189,22 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .body{
+    background-color: white;
+  }
+  .sidebar {
+    width: 60px; /* Adjust sidebar width for small screens */
+  }
+
   .gpa-container {
-    padding: 40px 10px 10px 0px; /* Default padding */
-    max-width: 80%; /* Full width on smaller screens */
-    margin: 0 10px; /* Small margin on the sides */
-    align-items: flex-start; /* Align content to the left */
-    padding-left: 80px; /* Add left padding to shift content right */
+    margin-left: 40px;
+    margin-right: 50px;
+    padding-left: 50px;
+    margin: 40px 42px; /* Center content on smaller screens */
+    max-width: 100%;
   }
-
-  /* Maintain box design, adjust inputs and button to full width */
-  .module-grade select {
-    width: 100%; /* Full width for select dropdowns */
-  }
-
-  .calculate-btn {
-    width: 100%; /* Full width for the button */
-    padding: 12px 20px; /* Adjust padding */
-  }
-
-  /* Result section adjustments */
-  .gpa-result {
-    padding: 20px;
-  }
-
-  /* Name input adjustments */
-  .name-input input {
-    width: 60%; /* Full width for the name input */
-  }
-
-  h1 {
-    font-size: 28px; /* Adjust heading size for smaller screens */
-  }
-
-  p {
-    font-size: 16px; /* Adjust paragraph text for smaller screens */
+  .gpa-result{
+    padding-left: 15px;
   }
 }
 
@@ -238,7 +239,7 @@ p {
 .name-input input:hover::after {
   content: 'Click to choose or enter grade';
   position: absolute;
-  background-color: #ffffff;
+  background-color: #333;
   color: white;
   padding: 5px;
   font-size: 14px;
@@ -248,14 +249,13 @@ p {
   margin-left: 10px;
   transform: translateY(-50%);
   white-space: nowrap;
-  width: 80%;
 }
 
 /* Styling for Labels */
 label {
   font-weight: 600;
   font-size: 18px;
-  color: #f5f3f3;
+  color: #333;
 }
 
 /* Focus Effect for Inputs */

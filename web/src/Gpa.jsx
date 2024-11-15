@@ -7,9 +7,9 @@ function GpaCalculator() {
   const credits = {
     digitalElectronics: 3.0,
     dataStructures: 4.0,
-    computerOrg: 3.0,
-    engineeringMath: 3.0,
-    englishForAcad: 3.0
+    computerOrganization: 3.0,
+    engineeringMathematics2: 3.0,
+    englishForAcademic: 3.0
   };
 
   // Define grade points for each grade
@@ -32,9 +32,9 @@ function GpaCalculator() {
   const [grades, setGrades] = useState({
     digitalElectronics: '',
     dataStructures: '',
-    computerOrg: '',
-    engineeringMath: '',
-    englishForAcad: ''
+    computerOrganization: '',
+    engineeringMathematics2: '',
+    englishForAcademic: ''
   });
 
   // State to store the final GPA result
@@ -52,6 +52,13 @@ function GpaCalculator() {
   const calculateGpa = () => {
     if (!name.trim()) {
       alert("Please enter your name before calculating GPA.");
+      return;
+    }
+
+    // Check if all module grades are entered
+    const allGradesEntered = Object.values(grades).every(grade => grade !== '');
+    if (!allGradesEntered) {
+      alert("Please enter grades for all modules.");
       return;
     }
 
@@ -78,9 +85,9 @@ function GpaCalculator() {
     formData.append('name', name);
     formData.append('digitalElectronics', grades.digitalElectronics);
     formData.append('dataStructures', grades.dataStructures);
-    formData.append('computerOrg', grades.computerOrg);
-    formData.append('engineeringMath', grades.engineeringMath);
-    formData.append('englishForAcad', grades.englishForAcad);
+    formData.append('computerOrganization', grades.computerOrganization);
+    formData.append('engineeringMathematics2', grades.engineeringMathematics2);
+    formData.append('englishForAcademic', grades.englishForAcademic);
     formData.append('finalGpa', gpa);
 
     try {
@@ -108,19 +115,18 @@ function GpaCalculator() {
         <p>Enter your grades for each module to calculate your GPA.</p>
 
         <input 
-  type="text"
-  value={name}
-  onChange={(e) => setName(e.target.value)}
-  placeholder="Enter Your Name"
-  style={{
-    backgroundColor: 'white' , 
-    color: 'black' ,
-    height: '40px',
-    fontSize:'25px'
-  }}
-  className="name-input"
-/>
-
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Enter Your Name"
+          style={{
+            backgroundColor: 'white' , 
+            color: 'black' ,
+            height: '40px',
+            fontSize:'25px'
+          }}
+          className="name-input"
+        />
 
         <div className="grades-input">
           {Object.keys(grades).map((module, index) => (

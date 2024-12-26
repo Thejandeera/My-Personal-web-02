@@ -80,6 +80,7 @@ function GpaCalculator() {
     sendToGoogleSheets(name, grades, finalGpaValue.toFixed(2));
   };
   
+  
 
   const sendToGoogleSheets = async (name, grades, gpa) => {
     const formData = new FormData();
